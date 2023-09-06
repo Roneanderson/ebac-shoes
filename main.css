@@ -23,6 +23,10 @@ header{
     align-items: center;
 }
 
+.coluna {
+    grid-template-columns: repeat(2, 48.50%);
+}
+
 .conteudo .sobre  {
     display: flex;
     padding: 20px;
@@ -117,11 +121,12 @@ button {
 button {
     margin-bottom: 10px;
     display: block;
+    padding: 1px;
+    max-width: 45%;
     
 }
 
 }
-
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
     .container {
@@ -129,13 +134,28 @@ button {
     }
 
     .finalizacao {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        
+    }
+    
+    .finalizacao .artigo {
+        padding: 10px;
+    }
+
+    button {
+        width: 60%;
         display: flex;
+        max-width: 100%;
+        font-size: 15px;
     }
 
     .produto h2 {
         display: flex;
-        grid-template-columns: repeat(2, 50%);
     }
     
+    .conteudo img {
+        width: 100%;
+    }
 
 }
